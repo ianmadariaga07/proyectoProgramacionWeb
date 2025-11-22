@@ -94,3 +94,20 @@ function mostrarToast(mensaje) {
     }
 }
 
+//BUSCADOR
+$(document).ready(function(){
+    $("#cajaBuscador").on("keyup", function() {
+        var valor = $(this).val().toLowerCase().trim();
+        
+        $("table tbody tr").each(function() {
+            var fila = $(this);
+            var textoFila = fila.text().toLowerCase();
+            
+            if (textoFila.indexOf(valor) > -1) {
+                fila.show();
+            } else {
+                fila.hide();
+            }
+        });
+    });
+});

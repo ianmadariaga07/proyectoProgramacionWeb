@@ -14,6 +14,12 @@
 
     <h1>Usuarios</h1>
     <a href="./registro.php">Registrar Usuario</a>
+    <div class="row">
+        <div class="input-field col s12 m6"> <i class="material-icons prefix">search</i>
+            <input id="cajaBuscador" type="text" class="validate">
+            <label for="cajaBuscador">Buscar por nombre, correo o cuenta</label>
+        </div>
+    </div>
     <table border="1" class="striped"> <thead>
         <tr>
             <th>ID</th>
