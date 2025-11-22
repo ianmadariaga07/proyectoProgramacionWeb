@@ -12,24 +12,39 @@
 </head>
 
 <body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="https://www.unam.mx/" class="brand-logo">UNAM</a>
+  <nav class="blue darken-3" role="navigation"> <div class="nav-wrapper container">
+      
+      <a id="logo-container" href="#" class="brand-logo">
+        <img src="./img/unam.png" alt="Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">
+        <span class="hide-on-small-only">FES Aragón</span> 
+      <img src="./img/fesaragon.png" alt="Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">
+      </a>
+        
       <ul class="right hide-on-med-and-down">
-        <li><a href="https://www.aragon.unam.mx/fes-aragon/#!/inicio">FES Aragon</a></li>
+        <li><a href="https://www.ingenierias-aragon.net/"><i class="material-icons left">home</i>Inicio</a></li>
+        <li><a href="https://www.aragon.unam.mx/" target="_blank"><i class="material-icons left">school</i>Sitio Oficial</a></li>
+        <li><a href="./login.php" class="red darken-1 btn small">Salir</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="https://www.aragon.unam.mx/fes-aragon/#!/inicio">FES Aragon</a></li>
+        <li><div class="user-view">
+            <div class="background blue darken-2"></div>
+            <span class="white-text name">Sistema Escolar</span>
+            <span class="white-text email">Alumno</span>
+        </div></li>
+        <li><a href="https://www.ingenierias-aragon.net/"><i class="material-icons">home</i>Inicio</a></li>
+        <li><a href="./login.php"><i class="material-icons">exit_to_app</i>Cerrar Sesión</a></li>
       </ul>
-      <a href="https://www.unam.mx/" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">UNAM</i></a>
+      
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-  </nav>
+</nav>
 
   <!-- aqui va mi formulario -->
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Registro de sistema</h1>
+      <h1 class="header center orange-text">Registro de Sistema</h1>
     </div>
   </div>
 

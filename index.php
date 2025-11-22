@@ -12,57 +12,66 @@
 ?>
 <?php include('./head.php'); ?>
 
-    <h1>Usuarios</h1>
-    <a href="./registro.php">Registrar Usuario</a>
+    <h3 class="center-align grey-text text-darken-2">Gestión de Usuarios</h3>
     <div class="row">
-        <div class="input-field col s12 m6"> <i class="material-icons prefix">search</i>
+        <div class="input-field col s12 m8 l9"> 
+            <i class="material-icons prefix">search</i>
             <input id="cajaBuscador" type="text" class="validate">
             <label for="cajaBuscador">Buscar por nombre, correo o cuenta</label>
         </div>
+
+        <div class="col s12 m4 l3 right-align">
+            <a href="./registro.php" class="btn waves-effect waves-light blue darken-3" style="margin-top: 25px; width: 100%;">
+                <i class="material-icons left">person_add</i>
+                Registrar
+            </a>
+        </div>
     </div>
-    <table border="1" class="striped"> <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido Paterno</th>
-            <th>Apellido Materno</th>
-            <th>No. Cuenta</th> 
-            <th>Email</th>
-            <th>Telefono</th>
-            <th>Fecha de Registro</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-        <tr id="fila-<?php echo $row['id']; ?>">
-            <td><?php echo $row['id']; ?></td>
-            <td class="editable" data-campo="nombre"><?php echo $row['nombre'];?></td>
-            <td class="editable" data-campo="apellidoPaterno"><?php echo $row['apellidoPaterno'];?></td>
-            <td class="editable" data-campo="apellidoMaterno"><?php echo $row['apellidoMaterno'];?></td>
-            <td class="editable" data-campo="noCuenta"><?php echo $row['noCuenta'];?></td>
-            <td class="editable" data-campo="email"><?php echo $row['email']; ?></td>
-            <td class="editable" data-campo="telefono"><?php echo $row['telefono'];?></td>
-            <td><?php echo $row['fechaRegistro']; ?></td>
-            
-            <td>
-                <button class="btn-flat waves-effect waves-light btn-editar" onclick="activarEdicion(<?php echo $row['id'];?>)">
-                    <i class="material-icons">edit</i>
-                </button>
-                <button class="btn-flat waves-effect waves-light red-text btn-eliminar" onclick="eliminarFila(<?php echo $row['id'];?>)">
-                    <i class="material-icons">delete</i>
-                </button>
 
-                <button class="btn green btn-guardar" style="display:none; margin-bottom:5px;" onclick="guardarEdicion(<?php echo $row['id'];?>)">
-                    Guardar
-                </button>
-                <button class="btn red btn-cancelar" style="display:none;" onclick="cancelarEdicion(<?php echo $row['id'];?>)">
-                    Cancelar
-                </button>
-            </td>
-        </tr>
-        <?php } ?>
-    </tbody>
-</table>
+    <table border="1" class="striped highlight responsive-table"> 
+        <thead class="blue darken-3 white-text">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>No. Cuenta</th> 
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Fecha de Registro</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($row = $result->fetch_assoc()) { ?>
+            <tr id="fila-<?php echo $row['id']; ?>">
+                <td><?php echo $row['id']; ?></td>
+                <td class="editable" data-campo="nombre"><?php echo $row['nombre'];?></td>
+                <td class="editable" data-campo="apellidoPaterno"><?php echo $row['apellidoPaterno'];?></td>
+                <td class="editable" data-campo="apellidoMaterno"><?php echo $row['apellidoMaterno'];?></td>
+                <td class="editable" data-campo="noCuenta"><?php echo $row['noCuenta'];?></td>
+                <td class="editable" data-campo="email"><?php echo $row['email']; ?></td>
+                <td class="editable" data-campo="telefono"><?php echo $row['telefono'];?></td>
+                <td><?php echo $row['fechaRegistro']; ?></td>
+                
+                <td>
+                    <button class="btn-flat waves-effect waves-light btn-editar" onclick="activarEdicion(<?php echo $row['id'];?>)">
+                        <i class="material-icons">edit</i>
+                    </button>
+                    <button class="btn-flat waves-effect waves-light red-text btn-eliminar" onclick="eliminarFila(<?php echo $row['id'];?>)">
+                        <i class="material-icons">delete</i>
+                    </button>
 
-<?php  include('./footer.php'); ?>
+                    <button class="btn green btn-guardar" style="display:none; margin-bottom:5px;" onclick="guardarEdicion(<?php echo $row['id'];?>)">
+                        Guardar
+                    </button>
+                    <button class="btn red btn-cancelar" style="display:none;" onclick="cancelarEdicion(<?php echo $row['id'];?>)">
+                        Cancelar
+                    </button>
+                </td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+
+<?php include('./footer.php'); ?>

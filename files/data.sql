@@ -24,7 +24,4 @@ INSERT INTO users(username, password) VALUES ('ariwithd', 'admin321285676');
 INSERT INTO users(username, password) VALUES ('admin', '123');
 
 INSERT INTO alumnos(nombre, apellidoPaterno, apellidoMaterno, noCuenta, email, telefono) 
-VALUES ('Ian','Tranquilino','Madariaga','424146195','ianmadariaga95@aragon.unam.mx','2283542349');
-
-
-
+VALUES ('Ian','Tranquis','Maba','123456','ian@aragon.unam.mx','1234567890');
