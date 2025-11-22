@@ -1,17 +1,8 @@
 <?php
-
-/*local
-$host = 'localhost:3308';
-$user = 'root';  // Cambia esto si tu usuario de MySQL es diferente
-$password = '123456';  // Deja vacío si no tienes contraseña configurada
-$dbname = 'crud_app';
-*/
-
-// hosting
-$host = 'sql305.infinityfree.com';
-$user = 'if0_40337341';  
-$password = 'eD2yaAaxag';
-$dbname = 'if0_40337341_ico';
+$host = 'localhost:3306';
+$user = 'root';  
+$password = '1234567';
+$dbname = 'crudLogin';
 
 $conn = new mysqli($host, $user, $password, $dbname);
 
