@@ -8,4 +8,5 @@ Caracteristicas del proyecto:
 - Edición, eliminación y creación
 - Validación básica
 - Importación de base de datos con data.sql
-- Uso de Bootstrap para interfaz
+- Uso de Materalize para interfaz
+- Uso de php, html y Javascript 
