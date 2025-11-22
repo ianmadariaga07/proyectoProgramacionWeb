@@ -29,6 +29,8 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
+  <script src="./modificaciones.js"></script>
+
   </body>
 </html>
     <!--JavaScript at end of body for optimized loading-->
