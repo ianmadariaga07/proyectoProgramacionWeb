@@ -1,13 +1,14 @@
 <?php
-include('db.php');
+include('./conexiondb.php');
 
-$id = $_GET['id'];
-$sql = "DELETE FROM alumnos WHERE id=$id";
-
-if ($conn->query($sql) === TRUE) {
-    header('Location: ../index.php');
-    exit();
-} else {
-    echo "Error: " . $conn->error;
+if(isset($_POST['id'])){
+    $id = $_POST['id'];
+    $sql = "DELETE FROM alumnos WHERE id = '$id'";
+    
+    if(mysqli_query($conn, $sql)){
+        echo "success"; 
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
 }
 ?>

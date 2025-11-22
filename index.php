@@ -6,7 +6,7 @@
         exit(); 
     }
 
-    include('./logica/db.php');
+    include('./logica/conexiondb.php');
     $consulta= "SELECT * FROM alumnos";
     $result = $conn->query($consulta);
 ?>

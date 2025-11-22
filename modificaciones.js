@@ -41,7 +41,7 @@ function guardarEdicion(id) {
     });
 
     $.ajax({
-        url: 'logica/updateAjax.php',
+        url: 'logica/update.php',
         type: 'POST',
         data: datos,
         success: function(respuesta) {
@@ -71,7 +71,7 @@ function eliminarFila(id) {
     if(!confirm("¿Estás seguro de que deseas eliminar este alumno?")) return;
 
     $.ajax({
-        url: 'logica/deleteAjax.php', 
+        url: 'logica/delete.php', 
         type: 'POST',
         data: { id: id },
         success: function(respuesta) {
