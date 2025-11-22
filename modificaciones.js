@@ -41,17 +41,21 @@ function guardarEdicion(id) {
     });
 
     $.ajax({
-        url: 'logica/updateAjax.php', 
+        url: 'logica/updateAjax.php',
         type: 'POST',
         data: datos,
         success: function(respuesta) {
             if(respuesta.trim() == 'success') {
                 fila.find(".editable").each(function() {
-                    var inputVal = $(this).find("input").val();
-                    $(this).html(inputVal); 
+                    var input = $(this).find("input"); 
+                    var nuevoValor = input.val(); 
+                    $(this).html(nuevoValor); 
+                    $(this).data("valor-original", nuevoValor); 
                 });
-                
-                cancelarEdicion(id); 
+                //aqui estaba el error, ya no hay que hablar a cancelarEdicion
+                fila.find(".btn-guardar, .btn-cancelar").hide();
+                fila.find(".btn-editar, .btn-eliminar").show();
+
                 mostrarToast('Usuario actualizado correctamente');
             } else {
                 alert("Error al guardar: " + respuesta);
